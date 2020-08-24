@@ -1,0 +1,21 @@
+1.先要在httpd.conf（这个是Apache 总的配置文件）中，将虚拟路径的注释去掉。
+#Include etc/extra/httpd-vhosts.conf
+使httpd-vhosts.conf文件起作用，或者直接在httpd.conf中写配置也可以，但不建议这么做。
+相关的配置有：Listen NameVirtualHost <VirtualHost>
+
+2.Listen要监听的端口，多个端口，要写多个Listen；否则Apache启动的时候，不会启动相应的套接字。
+比如
+Listen 80
+Listen 8080
+
+3.NameVirtualHost 如果没有这个，<VirtualHost>标签就没什么作用。
+
+4.最关键的VirtualHost。
+重要：Apache 在接受到请求时，首先会默认第一个VirtualHost，然后再找匹配的，如果没有匹配的，就是第一个VirtualHost起作用。
+因此在httpd.conf中，将<Dicrectory />（这个是所有目录的默认配置)
+和<Direcotry /opt/lampp/htdocs>的权限，都是deny from all.作为默认；或者直接在httpd.conf中配置
+
+<Directory />
+    Options Indexes FollowSymLinks 
+    AllowOverride All 
+</Directory>

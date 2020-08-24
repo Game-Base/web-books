@@ -1,0 +1,2 @@
+git如何避免每次pull或者push的时候都要输入用户名和密码？
+git config --global credential.helper store
