@@ -1,0 +1,69 @@
+{
+  "engineVersion": "5.2.31",
+  "compilerVersion": "5.2.31",
+  "template": {},
+  "target": {
+    "current": "web"
+  },
+  "modules": [
+    {
+      "name": "egret"
+    },
+    {
+      "name": "eui"
+    },
+    {
+      "name": "assetsmanager"
+    },
+    {
+      "name": "tween"
+    },
+    {
+      "name": "game"
+    },
+    {
+      "name": "socket"
+    },
+    {
+      "name": "promise"
+    },
+    {
+      "name": "jszip",
+      "path": "libs"
+    },
+    {
+      "name": "md5",
+      "path": "libs"
+    },
+    {
+      "name": "mobile-detect",
+      "path": "libs"
+    },
+    {
+      "name": "protobuf-library",
+      "path": "protobuf-login/library"
+    },
+    {
+      "name": "protobuf-bundles",
+      "path": "protobuf-login/bundles"
+    },
+    {
+      "name": "login",
+      "path": "lib-login"
+    }
+  ],
+  "targets": {
+    "android": {
+      "appname": "西游正传",
+      "packagename": "com.gmkj.xyzz"
+    }
+  },
+  "eui": {
+    "exmlRoot": [
+      "resource/eui_skins",
+      "resource/game_skin",
+      "resource/login_skins",
+      "resource/custom_skin"
+    ]
+  }
+}
